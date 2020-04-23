@@ -12,5 +12,9 @@ namespace CW.Models
         public string IndexNumber { get; set; }
         public DateTime BirthDate { get; set; }
         public int IdEnrollment { get; set; }
+        //7
+        public string Index { get; set; }
+        public string Password { get; set; }
+        public string Role { get; set; }
     }
 }
