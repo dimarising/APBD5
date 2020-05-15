@@ -35,6 +35,14 @@ namespace CW
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+
+              services.AddDbContext<StudentDBContext>(options =>
+            {
+                options.UseSqlServer("Data Source=db-mssql;Initial Catalog=s16541;Integrated Security=True");
+            });
+            services.AddControllers();
+
+
             /*           services.AddControllers();
 
                        services.AddSwaggerGen(c =>
