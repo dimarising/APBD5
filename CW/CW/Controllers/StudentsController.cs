@@ -16,6 +16,17 @@ namespace CW.Controllers
     [Route("api/students")]
     public class StudentsController : ControllerBase
     {
+
+        private readonly StudentDbService students;
+        public IConfiguration Configuration { get; set; }
+
+        public StudentsController(StudentDbService studentDB, IConfiguration configuration)
+        {
+            _dbService = dbService;
+            Configuration = configuration;
+        }
+
+
         /*private readonly IDbService<Student> _dbService;
         public StudentsController(IDbService<Student> dbService)
         {
